@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposta</title>
+</head>
+<body>
+    <div>
+        <h2>Informações Enviadas</h2>
+        <p>Nome: <span id="nome"></span></p>
+        <p>Idade: <span id="idade"></span></p>
+        <p>Profissão: <span id="profissao"></span></p>
+        <p>Endereço: <span id="endereco"></span></p>
+    </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('nome').textContent = params.get('nome');
+        document.getElementById('idade').textContent = params.get('idade');
+        document.getElementById('profissao').textContent = params.get('profissao');
+        document.getElementById('endereco').textContent = params.get('endereco');
+    </script>
+</body>
+</html>
